@@ -12,4 +12,14 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  base: "/genesis/",
+  server: {
+    proxy: {
+      "/amo-crm": {
+        target: "https://genesis-api-2cug.onrender.com/amo-crm",
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/amo-crm/, ""),
+      },
+    },
+  },
 })
