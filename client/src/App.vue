@@ -17,7 +17,7 @@ const createEntity = async (event) => {
 
   loading.value = true
 
-  const response = await axios.post(`http://localhost:3000/amo-crm/${selected.value}`)
+  const response = await axios.post(`https://genesis-api-2cug.onrender.com/amo-crm/${selected.value}`)
 
   switch (selected.value) {
     case 'lead':
