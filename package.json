@@ -1,0 +1,12 @@
+{
+  "name": "genesis",
+  "scripts": {
+    "build:client": "cd client; bun install; bun run build",
+    "serve:client": "bun run build:client; cd client; bun run preview",
+    "serve:server": "cd server; bun install; bun run build; bun run start:prod"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bun": "^1.0.26"
+  }
+}
